@@ -26,7 +26,7 @@ export default function Hero() {
           trade, or withdraw your NFT from the staking wallet during this time.
         </div>
       </div>
-      <div className='flex flex-col justify-center items-center md:flex-row'>
+      <div className='flex flex-col justify-center items-center md:flex-row w-full flex-wrap'>
         <Card lama={yellowLama} AoC='1456' />
         <Card lama={pinkLama} AoC='3248' />
         <Card lama={brownLama} AoC='917' />

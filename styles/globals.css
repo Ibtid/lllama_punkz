@@ -4,7 +4,7 @@
 
 @layer components {
   .navSize {
-    height: 10vh;
+    padding: 0.5rem 0;
   }
   .content_bg {
     background-image: url('../public/assests/images/background.png');
