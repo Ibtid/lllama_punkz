@@ -16,8 +16,8 @@ export default function Hero() {
           DISCONNECT WALLET
         </div>
       </div>
-      <div className='text-lightGreen w-screen flex flex-col items-center mt-16'>
-        <div className='text-lightGreen w-screen flex justify-center items-center'>
+      <div className='text-lightGreen w-full flex flex-col items-center mt-16'>
+        <div className='text-lightGreen w-full flex justify-center items-center'>
           BE CAREFUL:
         </div>
         <div className='text-white font-semibold max-w-xl  flex  justify-center items-center text-center p-4'>
