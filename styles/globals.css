@@ -9,7 +9,7 @@
   .content_bg {
     background-image: url('../public/assests/images/background.png');
     min-height: 80.7vh;
-    background-size: cover;
-    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
   }
 }
