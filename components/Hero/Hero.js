@@ -67,6 +67,9 @@ export default function Hero() {
         } else {
             (async function () {
                 try {
+                    await window.ethereum.request({
+                        method: "eth_requestAccounts",
+                    });
                     const provider = new ethers.providers.Web3Provider(
                         window.ethereum
                     );
