@@ -5,8 +5,11 @@ import USA from '../../public/assests/images/flags/USA.jpg';
 import { IoMdArrowDropdown } from 'react-icons/io';
 
 import Hamburger from './Hamburger/Hamburger';
+import { useContext } from 'react';
+import { ContextStore } from '../../Context/ContextStore';
 
 export default function Navbar() {
+  const {contextStore, setContextStore} = useContext(ContextStore)
   return (
     <div className='navSize bg-deepGreen text-white flex justify-around items-center'>
       <div>
@@ -25,7 +28,7 @@ export default function Navbar() {
             {' '}
             <Image src={coin} width={18} height={18} />
           </div>
-          <div className='text-lightGreen ml-2'>0$ LLA</div>
+          <div className='text-lightGreen ml-2'>{contextStore.assets.length} LLAMA</div>
         </div>
         <div className='flex justify-around items-center ml-16'>
           <div className='flex justify-around items-center rounded-full overflow-hidden h-5 w-5'>
