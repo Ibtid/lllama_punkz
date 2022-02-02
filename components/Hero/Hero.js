@@ -38,20 +38,24 @@ export default function Hero() {
         }
     }, [contextStore.account]);
     if (typeof window !== "undefined") {
-        window.ethereum.on("accountsChanged", () => {
-            (async function () {
-                try {
-                    const provider = new ethers.providers.Web3Provider(
-                        window.ethereum
-                    );
-                    const signer = provider.getSigner();
-                    let account = await signer.getAddress();
-                    setContextStore({ ...contextStore, account });
-                } catch (err) {
-                    alert(err.message + "\n" + "Try logging in the Metamask");
-                }
-            })();
-        });
+        if (window.ethereum) {
+            window.ethereum.on("accountsChanged", () => {
+                (async function () {
+                    try {
+                        const provider = new ethers.providers.Web3Provider(
+                            window.ethereum
+                        );
+                        const signer = provider.getSigner();
+                        let account = await signer.getAddress();
+                        setContextStore({ ...contextStore, account });
+                    } catch (err) {
+                        alert(
+                            err.message + "\n" + "Try logging in the Metamask"
+                        );
+                    }
+                })();
+            });
+        }
     }
 
     const testContextStore = () => {
@@ -87,7 +91,7 @@ export default function Hero() {
                     <div
                         className="bg-deepOrange h-8 w-48 font-semibold p-2 flex justify-center items-center rounded-md cursor-pointer text-white"
                         onClick={onClickConnectWallet}
-                        style={{cursor: 'pointer'}}
+                        style={{ cursor: "pointer" }}
                     >
                         CONNECT WALLET
                     </div>
@@ -113,11 +117,7 @@ export default function Hero() {
                 </div>
             </div>
             <div className="flex flex-col justify-center items-center md:flex-row w-full flex-wrap">
-                {
-                    contextStore.assets.length === 0 && <div>
-                        
-                    </div>
-                }
+                {contextStore.assets.length === 0 && <div></div>}
                 {contextStore.assets.map((asset) => (
                     <Card lama={asset.image_url} AoC={asset.token_id} />
                 ))}
