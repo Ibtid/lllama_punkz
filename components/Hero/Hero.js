@@ -63,12 +63,15 @@ export default function Hero() {
     } else {
       (async function () {
         try {
+          await window.ethereum.request({
+            method: 'eth_requestAccounts',
+          });
           const provider = new ethers.providers.Web3Provider(window.ethereum);
           const signer = provider.getSigner();
           let account = await signer.getAddress();
           setContextStore({ ...contextStore, account });
         } catch (err) {
-          console.log(err.message + '\n' + 'Try logging in the Metamask');
+          alert(err.message + '\n' + 'Try logging in the Metamask');
         }
       })();
     }
