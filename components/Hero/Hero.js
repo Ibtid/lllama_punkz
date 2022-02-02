@@ -113,6 +113,11 @@ export default function Hero() {
                 </div>
             </div>
             <div className="flex flex-col justify-center items-center md:flex-row w-full flex-wrap">
+                {
+                    contextStore.assets.length === 0 && <div>
+                        
+                    </div>
+                }
                 {contextStore.assets.map((asset) => (
                     <Card lama={asset.image_url} AoC={asset.token_id} />
                 ))}
