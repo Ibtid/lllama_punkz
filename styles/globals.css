@@ -5,10 +5,11 @@
 @layer components {
   .navSize {
     padding: 0.5rem 0;
+    height: 6rem;
   }
   .content_bg {
     background-image: url('../public/assests/images/background.png');
-    min-height: 80.7vh;
+    min-height: 89.7vh;
     background-size: contain;
     background-position: center;
   }
