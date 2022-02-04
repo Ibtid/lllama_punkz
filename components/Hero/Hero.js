@@ -123,9 +123,8 @@ export default function Hero() {
           </div>
         )}
         {contextStore.assets.map((asset) => (
-          <Card lama={asset.image_url} AoC={asset.token_id} />
+          <Card lama={asset.image_url} AoC={asset.token_id} key={asset.token_id} />
         ))}
-        <Card lama={pinkLama} AoC={1106} />
       </div>
     </div>
   );

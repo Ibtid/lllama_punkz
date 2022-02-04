@@ -5,19 +5,19 @@ export default function Card(props) {
   return (
     <div className='mb-10 md:m-20 font-Roboto'>
       <div className='overflow-hidden relative h-60 w-60 '>
-        {/*<img className='w-60 h-60' src={props.lama} layout='responsive' />*/}
-        <div className='w-60 h-60'>
+        <img className='w-60 h-60' src={props.lama} layout='responsive' />
+        {/* <div className='w-60 h-60'>
           <Image
             src={props.lama}
             height={150}
             width={150}
             layout='responsive'
           />
-        </div>
+        </div> */}
         <div className='p-4 absolute bottom-0 left-0 h-28 w-60   bg-gradient-to-t from-black flex items-end justify-between font-semibold text-white'>
           <div>
             <div className='text-sm '>Staked for</div>
-            <div className='text-base  font-semibold'>2 days</div>
+            <div className='text-base  font-semibold'>0 days</div>
           </div>
           <div>
             <div className='text-sm '>Total earned</div>
