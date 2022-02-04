@@ -11,7 +11,7 @@ import { ContextStore } from '../../Context/ContextStore';
 export default function Navbar() {
   const { contextStore, setContextStore } = useContext(ContextStore);
   return (
-    <div className='navSize bg-deepGreen text-white flex justify-around items-center'>
+    <div className='navSize bg-deepGreen font-Roboto text-white flex justify-around items-center'>
       <div className='mr-4 md:mr-0'>
         <Image src={logo} width={120} height={60} />
       </div>

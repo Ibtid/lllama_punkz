@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,12 +8,18 @@
   .navSize {
     padding: 0.5rem 0;
     height: 6rem;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 50;
   }
   .content_bg {
     background-image: url('../public/assests/images/background.png');
     min-height: 89.7vh;
     background-size: contain;
     background-position: center;
+    margin-top: 6rem;
   }
 
   .sk-chase {

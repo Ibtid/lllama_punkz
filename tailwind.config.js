@@ -16,6 +16,7 @@ module.exports = {
       backgroundImage: {
         'hero-pattern': "url('/public/assests/images/background.png')",
       },
+      fontFamily: { Roboto: ['Roboto', 'sans-serif'] },
     },
   },
   plugins: [],
