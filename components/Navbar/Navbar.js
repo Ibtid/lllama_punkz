@@ -24,13 +24,16 @@ export default function Navbar() {
             const leftLanguage = dropDownData.filter(
                 (data) => languageData.language !== data.language
             );
-            console.log(languageData, leftLanguage);
             setLanguage(languageData);
             setDropDownData([languageData, leftLanguage[0]]);
+            setContextStore({...contextStore, currentLanguage: languageData})
         };
         return [currentLanguage, setCurrentLanguage, dropDownData];
     }
-
+    const staticData = {totalStaked: {
+      ENG: "TOTAL STAKED",
+      SPA: "TOTAL APUESTA"
+    }}
     const [currentLanguage, setCurrentLanguage, dropDownData] =
         useLanguageSelector({
             currentLanguage: {
@@ -60,10 +63,10 @@ export default function Navbar() {
             <div className="text-base font-semibold flex items-center md:mr-20">
                 <div className="flex justify-around items-center">
                     <div className="text-white text-base hidden md:flex transition-all">
-                        TOTAL STAKED
+                        {staticData.totalStaked[contextStore.currentLanguage.language]}
                     </div>
                     <div className="text-white text-sm ml-5 md:hidden transition-all">
-                        T STAKED
+                    {staticData.totalStaked[contextStore.currentLanguage.language]}
                     </div>
                     <div className="text-lightGreen ml-2 text-sm -mr-6 md:mr-0 md:ml-4 transition-all">
                         0
