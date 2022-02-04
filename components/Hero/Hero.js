@@ -4,7 +4,7 @@ import { ethers } from "ethers";
 import { useContext, useEffect, useState } from "react";
 import { ContextStore } from "../../Context/ContextStore";
 import { ImmutableXClient, Link } from "@imtbl/imx-sdk";
-import Spinkit from "./SpinKit";
+import Loading from './Loading.js'
 
 export default function Hero() {
     const linkAddress = "https://link.x.immutable.com";
@@ -170,7 +170,7 @@ export default function Hero() {
             <div className="flex flex-col justify-center items-center md:flex-row w-full flex-wrap">
                 {spinner && (
                     <div>
-                        <Spinkit />
+                        <Loading />
                     </div>
                 )}
                 {contextStore.assets.map((asset) => (

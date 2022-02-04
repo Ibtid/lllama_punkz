@@ -14,7 +14,6 @@ export default function Home() {
             flag: USA,
         }
     });
-    console.log(contextStore)
     return (
         <div>
             <ContextStore.Provider value={{ contextStore, setContextStore }}>
