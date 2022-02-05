@@ -12,7 +12,8 @@ export default function Home() {
         currentLanguage: {
             language: "ENG",
             flag: USA,
-        }
+        },
+        balance: 0
     });
     return (
         <div>

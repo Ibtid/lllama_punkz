@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from 'react';
 import { ContextStore } from '../../Context/ContextStore';
 import { ImmutableXClient, Link } from '@imtbl/imx-sdk';
 import Loading from './Loading.js';
+import axios from 'axios';
 
 export default function Hero() {
   const linkAddress = 'https://link.x.immutable.com';
@@ -21,8 +22,7 @@ export default function Hero() {
       let account = accounts[0];
       setContextStore({
         ...contextStore,
-        account,
-        currentLanguage: contextStore.currentLanguage,
+        account
       });
     };
     window.ethereum.on('accountsChanged', handleAccountChange);
@@ -49,10 +49,15 @@ export default function Hero() {
           assets = assets.concat(assetRequest.result);
           assetCursor = assetRequest.cursor;
         } while (assetCursor);
+        const contractAddress = "0x262BeE6504cc30DB0A19f6Bea177EAD8C0d139a4"
+        const apiKey = "QDBHHN1J4AZUYDCNR6G7U9U2CJ23FMM2T2"
+        let result = await axios.get(`https://api.polygonscan.com/api?module=account&action=tokenbalance&contractaddress=${contractAddress}&address=${contextStore.account}&tag=latest&apikey=${apiKey}`)
+        const balance = parseInt(result.data.result)/Math.pow(10,18)
+        console.log(balance)
         setContextStore({
           ...contextStore,
           assets,
-          currentLanguage: contextStore.currentLanguage,
+          balance
         });
         setSpinner(false);
       })();
@@ -78,8 +83,7 @@ export default function Hero() {
           let account = accounts[0];
           setContextStore({
             ...contextStore,
-            account,
-            currentLanguage: contextStore.currentLanguage,
+            account
           });
         } catch (err) {
           alert(err.message + '\n' + 'Try logging in the Metamask');

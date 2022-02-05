@@ -78,7 +78,7 @@ export default function Navbar() {
                         <Image src={coin} width={18} height={18} />
                     </div>
                     <div className="text-lightGreen flex ml-2 text-sm">
-                        {contextStore.assets.length}{" "}
+                        {contextStore.balance}{" "}
                         <div className="transition-all hidden md:flex ml-1">
                             LLAMA
                         </div>
