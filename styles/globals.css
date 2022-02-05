@@ -15,11 +15,12 @@
     z-index: 50;
   }
   .content_bg {
-    background-image: url('../public/assests/images/background.png');
+    /*background-image: url('../public/assests/images/background.png');*/
     min-height: 89.7vh;
     background-size: contain;
     background-position: center;
     margin-top: 6rem;
+    background-color: black;
   }
 
   .sk-chase {
