@@ -5,7 +5,6 @@ import { useContext, useEffect, useState } from 'react';
 import { ContextStore } from '../../Context/ContextStore';
 import { ImmutableXClient, Link } from '@imtbl/imx-sdk';
 import Loading from './Loading.js';
-import bgImage from '../../public/assests/images/background.png';
 
 export default function Hero() {
   const linkAddress = 'https://link.x.immutable.com';

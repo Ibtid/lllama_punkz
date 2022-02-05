@@ -17,6 +17,7 @@
   .content_bg {
     /*background-image: url('../public/assests/images/background.png');*/
     min-height: 89.7vh;
+    min-width: 98vw;
     background-size: contain;
     background-position: center;
     margin-top: 6rem;
