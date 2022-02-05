@@ -116,9 +116,7 @@ export default function Hero() {
     },
   };
   return (
-    //<div className="bg-[url('../public/assests/images/background.png')] content_bg font-Roboto">
-    <div
-      className={`bg-[url(https://scontent.fdac136-1.fna.fbcdn.net/v/t39.30808-6/273356366_494852235599595_5517559061743657645_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=730e14&_nc_ohc=Zz_IVz4JJMAAX_MaTVW&_nc_ht=scontent.fdac136-1.fna&oh=00_AT_eXfDmBfZpCRd6P1OsAQx1LvuXEocFNhmQ7MO0quDG-Q&oe=62038E72)] content_bg font-Roboto`}>
+    <div className="bg-[url('../public/assests/images/background.png')] content_bg font-Roboto">
       <div className='flex justify-evenly pt-16'>
         <a
           href='https://www.llamapunkz.com/'
