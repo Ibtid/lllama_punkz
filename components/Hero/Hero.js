@@ -116,7 +116,7 @@ export default function Hero() {
     },
   };
   return (
-    <div className="bg-[url('../public/assests/images/background.png')] content_bg font-Roboto">
+    <div className="bg-[url('https://i.ibb.co/bmXHhJh/background.png')] content_bg font-Roboto">
       <div className='flex justify-evenly pt-16'>
         <a
           href='https://www.llamapunkz.com/'
